@@ -28,6 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
     list.add(json.encode(t.getMap()));
     print(list);
     prefs.setString('task', json.encode(list));
+    _taskController.text  = '';
+    Navigator.of(context).pop();
   }
 
   @override
